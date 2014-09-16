@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Menu extends JPanel{
+	
+	
 	/**
 	 * 
 	 */
@@ -15,6 +17,8 @@ public class Menu extends JPanel{
 	JTextField charName = new JTextField(10);
 	JButton play = new JButton("Click to play!");
 	JButton exit = new JButton("Click to quit!");
+	
+	ActionHandler al = new ActionHandler(charName, play);
 	public Menu(){
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		this.setVisible(true);
@@ -30,6 +34,9 @@ public class Menu extends JPanel{
 		
 		this.add(play);
 		this.add(exit);
+		
+		
+		exit.addActionListener(al);
 	}
 
 }
