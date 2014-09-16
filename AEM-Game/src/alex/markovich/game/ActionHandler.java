@@ -15,17 +15,21 @@ public class ActionHandler implements ActionListener{
 
 	@SuppressWarnings("unused")
 	private JButton play;
+	private JButton exit;
 	@SuppressWarnings("unused")
 	private JTextField name;
-	public ActionHandler(JTextField name, JButton play){
+	public ActionHandler(JTextField name, JButton play, JButton exit){
 		this.play = play;
 		this.name = name;
+		this.exit = exit;
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if(true){
-			
+		if(e.getSource()==play){
+			System.out.println("Play");
+		}else if(e.getSource()==exit){
+			System.exit(0);
 		}
 		
 	}
