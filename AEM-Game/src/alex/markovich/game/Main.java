@@ -8,6 +8,12 @@ package alex.markovich.game;
 public class Main {
 
 	public static void main(String[]Args){
-		new Window();
+		new GameWindow();
+	}
+
+	public void switchModes() {
+		// TODO Auto-generated method stub
+		Test t = new Test();
+		t.switchModes();
 	}
 }

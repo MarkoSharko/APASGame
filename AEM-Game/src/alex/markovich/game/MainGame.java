@@ -5,6 +5,15 @@
  */
 package alex.markovich.game;
 
-public class MainGame{
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+
+public class MainGame extends JPanel{
+	JLabel test = new JLabel("Test");
+	public MainGame(){
+		this.add(test);
+	}
 
 }

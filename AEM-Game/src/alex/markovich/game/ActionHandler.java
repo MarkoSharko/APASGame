@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 
 public class ActionHandler implements ActionListener{
 
+	Main w = new Main();
 	@SuppressWarnings("unused")
 	private JButton play;
 	private JButton exit;
@@ -28,6 +29,7 @@ public class ActionHandler implements ActionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource()==play){
 			System.out.println("Play");
+			w.switchModes();
 		}else if(e.getSource()==exit){
 			System.exit(0);
 		}

@@ -8,7 +8,7 @@ package alex.markovich.game;
 
 import javax.swing.JFrame;
 
-public class Window extends JFrame{
+public class GameWindow extends JFrame{
 
 	/**
 	 * 
@@ -18,9 +18,13 @@ public class Window extends JFrame{
 	private static final int length = 600;
 	private static final int width = length * 3/4;
 	private static final String title = "Choose your own adventure";
+	
+	private boolean menuDisplayed = true;
+	private boolean mainGameDisplayed = false;
 	//Objects
 	Menu m = new Menu();
-	public Window(){
+	MainGame g = new MainGame();
+	public GameWindow(){
 		this.add(m);
 		this.setSize(length, width);
 		this.setTitle(title);
@@ -28,5 +32,11 @@ public class Window extends JFrame{
 		this.setVisible(true);
 		
 		
+	}
+	public void switchModes(){
+		if(menuDisplayed){
+			this.remove(m);
+			this.add(g);
+		}
 	}
 }
