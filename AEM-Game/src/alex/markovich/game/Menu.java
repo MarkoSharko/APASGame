@@ -18,7 +18,7 @@ public class Menu extends JPanel{
 	JButton play = new JButton("Click to play!");
 	JButton exit = new JButton("Click to quit!");
 	
-	ActionHandler al = new ActionHandler(charName, play);
+	ActionHandler al = new ActionHandler(charName, play, exit);
 	public Menu(){
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		this.setVisible(true);
@@ -35,7 +35,7 @@ public class Menu extends JPanel{
 		this.add(play);
 		this.add(exit);
 		
-		
+		play.addActionListener(al);
 		exit.addActionListener(al);
 	}
 
