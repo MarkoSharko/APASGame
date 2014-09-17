@@ -29,11 +29,12 @@ public class ActionHandler implements ActionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource()==play){
 			System.out.println("Play");
-			w.switchModes();
+			
 		}else if(e.getSource()==exit){
 			System.exit(0);
 		}
 		
 	}
+	
 
 }

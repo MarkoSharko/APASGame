@@ -22,10 +22,9 @@ public class GameWindow extends JFrame{
 	private boolean menuDisplayed = true;
 	private boolean mainGameDisplayed = false;
 	//Objects
-	Menu m = new Menu();
-	MainGame g = new MainGame();
+	
 	public GameWindow(){
-		this.add(m);
+		
 		this.setSize(length, width);
 		this.setTitle(title);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -33,10 +32,6 @@ public class GameWindow extends JFrame{
 		
 		
 	}
-	public void switchModes(){
-		if(menuDisplayed){
-			this.remove(m);
-			this.add(g);
-		}
-	}
+	
+	
 }
