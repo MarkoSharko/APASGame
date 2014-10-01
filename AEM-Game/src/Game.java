@@ -1,4 +1,4 @@
-package alex.markovich.game;
+
 
 public class Game{
 
