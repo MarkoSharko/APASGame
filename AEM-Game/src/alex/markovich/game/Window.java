@@ -27,7 +27,7 @@ public class Window extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource()== MainPanel.b){
-			System.out.println("WORKS!");
+			System.out.println(MainPanel.lb.getText());
 		}
 	}
 }
