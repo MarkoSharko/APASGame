@@ -12,7 +12,7 @@ public class Player {
 	public String getName(){
 		return name;
 	}
-	public void setHelth(int health){
+	public void setHealth(int health){
 		this.health = health;
 	}
 	public int getHealth(){

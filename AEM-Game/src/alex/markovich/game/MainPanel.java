@@ -9,6 +9,10 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class MainPanel extends GenericPanel{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 JButton b = new JButton("Test");
 JLabel l = new JLabel("Please enter your name");	
 JTextField lb = new JTextField();

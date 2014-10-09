@@ -16,6 +16,7 @@ public class SaveHandler {
 		
 		 f = new File(filePath);
 		try {
+			System.out.println("Creating buffer writer");
 			writer = new BufferedWriter( new FileWriter(filePath));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -28,7 +29,7 @@ public class SaveHandler {
 	
 	public void checkFilePath(){
 		if(f.exists()){
-			System.out.println("File already exits");
+			System.out.println("File already exits, ");
 		}else{
 			
 			try {
@@ -49,6 +50,7 @@ public class SaveHandler {
 			return false;
 	}
 	
+	@SuppressWarnings("resource")
 	public String getName(){
 		Scanner x = null;
 		String s = null;
@@ -62,6 +64,7 @@ public class SaveHandler {
 			 System.out.println(s);
 			 return s;
 		}
+		
 		return s;
 		
 	}
@@ -69,6 +72,7 @@ public class SaveHandler {
 	public void save(int Health, String Name){
 		printW.println(Name);
 		printW.println(Health);
+		printW.close();
 		
 	}
 	

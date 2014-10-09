@@ -2,11 +2,13 @@ package alex.markovich.game;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 import alex.markovich.game.player.Player;
 import alex.markovich.game.save.SaveHandler;
 
-public class Game  implements ActionListener{
+public class Game  implements ActionListener, WindowListener{
 	MainPanel MainPanel = new MainPanel();
 	SaveHandler save = new SaveHandler();
 	Player player = new Player();
@@ -21,10 +23,71 @@ public class Game  implements ActionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource()== MainPanel.b){
 			System.out.println(MainPanel.lb.getText());
+			player.setName(MainPanel.lb.getText());
 		}
 	}
 	public void initAction(){
 		MainPanel.b.addActionListener(this);
+		w.addWindowListener(this);
+		player.setHealth(100);
 	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("Saving");
+		save.save(player.getHealth(), player.getName());
+		System.exit(0);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	@Override
+
+
+	
+	
+	
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 }
