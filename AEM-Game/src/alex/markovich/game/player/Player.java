@@ -4,7 +4,7 @@ public class Player {
 
 	//Player Variables
 	private int health, damage, armor;
-	private String name;
+	private String name, played;
 	
 	public void setName(String name){
 		this.name = name;
@@ -23,6 +23,12 @@ public class Player {
 	}
 	public int getDamage(){
 		return damage;
+	}
+	public void setPlayedBefore(String played){
+		this.played = played;
+	}
+	public String getPlayedBefore(){
+		return played;
 	}
 	public void setArmor(int armor){
 		this.armor = armor;

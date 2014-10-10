@@ -29,23 +29,67 @@ public class Game  implements ActionListener, WindowListener{
 	public void initAction(){
 		MainPanel.b.addActionListener(this);
 		w.addWindowListener(this);
-		player.setHealth(100);
+		
+		if(player.getPlayedBefore() == "yes"){
+			player.setName(save.array[0]);
+			player.setHealth(Integer.parseInt(save.array[1]));
+			player.setPlayedBefore(save.array[2]);
+			player.setDamage(Integer.parseInt(save.array[3]));
+			player.setArmor(Integer.parseInt(save.array[4]));
+		}
+		
 	}
 
 	@Override
 	public void windowOpened(WindowEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void windowClosing(WindowEvent e) {
 		// TODO Auto-generated method stub
 		System.out.println("Saving");
-		save.save(player.getHealth(), player.getName());
+		save.save(player.getHealth(), player.getName(), player.getPlayedBefore());
 		System.exit(0);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
