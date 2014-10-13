@@ -50,7 +50,7 @@ public class Game  implements ActionListener, WindowListener{
 	public void windowClosing(WindowEvent e) {
 		// TODO Auto-generated method stub
 		System.out.println("Saving");
-		save.save(player.getHealth(), player.getName(), player.getPlayedBefore());
+		save.save(player.getHealth(), player.getName(), player.getPlayedBefore(), player.getArmor(), player.getDamage());
 		System.exit(0);
 	}
 
