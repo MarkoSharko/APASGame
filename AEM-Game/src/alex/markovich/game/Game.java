@@ -10,6 +10,7 @@ import alex.markovich.game.save.SaveHandler;
 
 public class Game  implements ActionListener, WindowListener{
 	MainPanel MainPanel = new MainPanel();
+	GamePanel GamePanel = new GamePanel();
 	SaveHandler save = new SaveHandler();
 	Player player = new Player();
 	Window w; 
@@ -24,8 +25,27 @@ public class Game  implements ActionListener, WindowListener{
 		if(e.getSource()== MainPanel.b){
 			System.out.println(MainPanel.lb.getText());
 			player.setName(MainPanel.lb.getText());
+			changePanels();
+		}
+		
+	}
+	
+	public void changePanels(){
+		String panel = "main";
+		if(panel == "main"){
+			w.remove(MainPanel);
+			w.add(GamePanel);
+			w.repaint();
+			panel = "main";
+		}
+		if(panel == "game"){
+			w.remove(GamePanel);
+			w.add(MainPanel);
+			w.repaint();
+			panel = "game";
 		}
 	}
+	
 	public void initAction(){
 		MainPanel.b.addActionListener(this);
 		w.addWindowListener(this);
@@ -36,6 +56,7 @@ public class Game  implements ActionListener, WindowListener{
 			player.setPlayedBefore(save.array[2]);
 			player.setDamage(Integer.parseInt(save.array[3]));
 			player.setArmor(Integer.parseInt(save.array[4]));
+			
 		}
 		
 	}
